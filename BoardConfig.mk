@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FOLDER := device/wiko/stairway
+DEVICE_FOLDER := device/lenovo/a3
 
--include vendor/wiko/stairway/BoardConfigVendor.mk
+-include vendor/lenovo/a3/BoardConfigVendor.mk
 
 # board
 TARGET_BOARD_PLATFORM := mt6589
@@ -37,7 +37,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
 
 # EGL settings
-BOARD_EGL_CFG := device/wiko/stairway/egl.cfg
+BOARD_EGL_CFG := device/lenovo/a3/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -64,4 +64,4 @@ BOARD_WPA_SUPPLICANT_DRIVER := NL80211
 BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_mtk
 
 # telephony
-BOARD_RIL_CLASS := ../../../device/wiko/stairway/ril/
+BOARD_RIL_CLASS := ../../../device/lenovo/a3/ril/
