@@ -5,7 +5,7 @@ DEVICE=a3
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
-echo "Pulling $DEVICE files..."
+echo "Pulling $DEVICE blobs..."
 for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
 DIR=`dirname $FILE`
     if [ ! -d $BASE/$DIR ]; then
@@ -18,8 +18,8 @@ cp ~/a3-blobs/$FILE $BASE/$FILE
 done
 
 # some extra stuff
-cp ~/a3-blobs/system/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6589.so
-cp ~/a3-blobs/system/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6589.so
+cp ~/a3-blobs/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6589.so
+#cp ~/a3-blobs/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6589.so
 
 #adb pull /system/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6589.so
 #adb pull /system/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6589.so
