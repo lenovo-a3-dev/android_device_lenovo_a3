@@ -47,7 +47,7 @@ vendor/lib/egl/libEGL_mtk.so
 vendor/lib/egl/libGLESv2_mtk.so
 vendor/lib/libpvrANDROID_WSEGL.so
 vendor/lib/libBLPP.so
-vendor/lib/hw/gralloc.mt8389
+vendor/lib/hw/gralloc.mt8389.so
 
 #lib/hw/hwcomposer.mt6589.so
 lib/hw/gps.default.so
