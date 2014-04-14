@@ -42,7 +42,7 @@ USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
 # kernel
-TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel
+TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel_lenovo89_tb_twn_a_jb2_v2.bin
 
 # partition info
 BOARD_BOOTIMAGE_PARTITION_SIZE := 6291456
@@ -55,7 +55,7 @@ TARGET_USERIMAGES_USE_EXT4 := true
 
 # recovery
 TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/fstab.mt6589
-TARGET_PREBUILT_RECOVERY_KERNEL := $(DEVICE_FOLDER)/recovery/kernel
+TARGET_PREBUILT_RECOVERY_KERNEL := $(DEVICE_FOLDER)/prebuilt/kernel_lenovo89_tb_twn_a_jb2_v2.bin
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # wifi
