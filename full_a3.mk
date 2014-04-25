@@ -16,9 +16,9 @@
 $(call inherit-product, device/lenovo/a3/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Do not configure as xhdpi device to prevent breaking without mdpi drawables
-#PRODUCT_AAPT_CONFIG := normal mdpi hdpi xhdpi
-#PRODUCT_AAPT_PREF_CONFIG := hdpi
+# Enable higher-res drawables while keeping mdpi as primary source
+PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
+PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := full_a3
