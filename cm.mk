@@ -20,9 +20,7 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 TARGET_SCREEN_HEIGHT := 1024
 TARGET_SCREEN_WIDTH := 600
 
+# Overrides for CM
 PRODUCT_NAME := cm_a3
 PRODUCT_DEVICE := a3
-PRODUCT_MODEL := Lenovo A3000-H
-PRODUCT_RELEASE_NAME := A3000-H
-PRODUCT_BRAND := Android
-PRODUCT_MANUFACTURER := Lenovo
+PRODUCT_RELEASE_NAME := LenovoA3000-H

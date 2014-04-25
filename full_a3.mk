@@ -20,8 +20,9 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
 PRODUCT_AAPT_PREF_CONFIG := tvdpi
 
-# Discard inherited values and use our own instead.
+# Device identifier
 PRODUCT_NAME := full_a3
 PRODUCT_DEVICE := a3
-PRODUCT_BRAND := Android
-PRODUCT_MODEL := A3000-H
+PRODUCT_MODEL := Lenovo A3000-H
+PRODUCT_BRAND := Lenovo
+PRODUCT_MANUFACTURER := LENOVO
