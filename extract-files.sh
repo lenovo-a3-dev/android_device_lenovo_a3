@@ -12,14 +12,8 @@ DIR=`dirname $FILE`
 mkdir -p $BASE/$DIR
     fi
 
-<<<<<<< HEAD
 cp ~/a3-blobs/$FILE $BASE/$FILE
-
-=======
-cp /work/chris/android/wiko/backup/system/$FILE $BASE/$FILE
->>>>>>> 479ebc8... stairway: microphone needs submix (stock is good enough) and blisrc blob at compile time
 #adb pull /system/$FILE $BASE/$FILE
-
 done
 
 # some extra stuff
