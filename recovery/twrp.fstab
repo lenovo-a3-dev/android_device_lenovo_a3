@@ -1,0 +1,13 @@
+# mount point	fstype		device			[device2]
+
+/boot		emmc		/dev/bootimg
+/cache		ext4		/dev/block/mmcblk0p7
+/data		ext4		/dev/block/mmcblk0p8
+/misc		emmc		/dev/misc
+/recovery	emmc		/dev/recovery
+/emmc		vfat		/dev/block/mmcblk0p9
+/system		ext4		/dev/block/mmcblk0p6
+/fac		ext4		/dev/block/mmcblk0p5	flags=display="Fac";backup=1
+/sdcard		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1
+/nvram		emmc		/dev/nvram	flags=display="Nvram";backup=1
+/uboot		emmc		/dev/uboot	flags=display="Uboot";backup=1
