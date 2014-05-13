@@ -1,13 +1,13 @@
 # mount point	  fstype	device			         [device2]			options (length for cryptfs encryption footer)
 
-/boot		        emmc		/dev/bootimg
-/cache		      ext4		/dev/block/mmcblk0p7                      flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
-/data		        ext4		/dev/block/mmcblk0p8 length=-16384	      flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
-/misc		        emmc		/dev/misc
+/boot		      emmc		/dev/bootimg
+/cache		      ext4		/dev/block/mmcblk0p7                        flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/data		      ext4		/dev/block/mmcblk0p8 length=-16384	        flags=backup=1;canbewiped;wipeingui;wipeduringfactoryreset
+/misc		      emmc		/dev/misc
 /recovery	      emmc		/dev/recovery
-/sdcard		      vfat		/dev/block/mmcblk0p9                      flags=display="Internal SD Card";storage;wipeingui
-/system		      ext4		/dev/block/mmcblk0p6                      flags=backup=1;canbewiped;wipeingui
-/fac		        ext4		/dev/block/mmcblk0p5	                    flags=display="Fac";backup=1
-/external_sd		vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1  flags=display="External SD Card";storage;wipeingui;removable;settingsstorage
-/nvram		      emmc		/dev/nvram	                              flags=display="Nvram";backup=1
-/uboot		      emmc		/dev/uboot	                              flags=display="Uboot";backup=1
+/sdcard		      vfat		/dev/block/mmcblk0p9                        flags=display="Internal SD Card";storage;wipeingui
+/system		      ext4		/dev/block/mmcblk0p6                        flags=backup=1;canbewiped;wipeingui
+/fac		      ext4		/dev/block/mmcblk0p5	                    flags=display="Fac";backup=1
+/external_sd	  vfat		/dev/block/mmcblk1p1	/dev/block/mmcblk1  flags=display="External SD Card";storage;wipeingui;removable;settingsstorage
+/nvram		      emmc		/dev/nvram	                                flags=display="Nvram";backup=1
+/uboot		      emmc		/dev/uboot	                                flags=display="Uboot";backup=1
