@@ -13,7 +13,6 @@ mkdir -p $BASE/$DIR
     fi
 
 cp ~/a3-blobs/$FILE $BASE/$FILE
-
 #adb pull /system/$FILE $BASE/$FILE
 done
 
@@ -22,6 +21,6 @@ cp ~/a3-blobs/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6589.so
 #cp ~/a3-blobs/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6589.so
 
 #adb pull /system/lib/hw/audio_policy.default.so $BASE/lib/hw/audio_policy.mt6589.so
-#adb pull /system/lib/libaudio.primary.default.so $BASE/lib/hw/audio.primary.mt6589.so
+#adb pull /system/lib/hw/libaudio.r_submix.default.so $BASE/lib/hw/audio.r_submix.mt6589.so
 
 ./setup-makefiles.sh

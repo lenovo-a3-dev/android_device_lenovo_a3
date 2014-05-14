@@ -40,7 +40,8 @@ PRODUCT_COPY_FILES += \
 	$(MOD_SRC)/wlan_mt6628.ko:$(MOD_TGT)/wlan_mt6628.ko
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/root/fstab.mt6589:root/fstab.mt6589
+	$(LOCAL_PATH)/root/fstab.mt6589:root/fstab.mt6589 \
+	$(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/ueventd.mt6589.rc:root/ueventd.mt6589.rc \
@@ -104,6 +105,10 @@ PRODUCT_TAGS += dalvik.gc.type-precise
 PRODUCT_PACKAGES += \
 	gsm0710muxd
 
+# audio
+PRODUCT_PACKAGES += \
+	audio.r_submix.default \
+	libblisrc
 # wifi
 PRODUCT_PACKAGES += \
 	lib_driver_cmd_mtk
@@ -112,3 +117,4 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 $(call inherit-product, frameworks/native/build/phone-xhdpi-1024-dalvik-heap.mk)
+
