@@ -41,7 +41,8 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/fstab.mt6589:root/fstab.mt6589 \
-	$(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab
+	$(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
+	$(LOCAL_PATH)/recovery/extra.fstab:recovery/root/etc/extra.fstab
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/ueventd.mt6589.rc:root/ueventd.mt6589.rc \
