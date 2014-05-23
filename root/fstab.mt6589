@@ -11,3 +11,5 @@
 /devices/platform/mtk-msdc.1/mmc_host/mmc1 auto auto defaults voldmanaged=sdcard1:auto
 
 /dev/bootimg      /boot               emmc      defaults          			defaults
+/dev/recovery     /recovery           emmc      defaults                                defaults
+/dev/uboot        /uboot              emmc      defaults                                defaults
