@@ -279,13 +279,13 @@ on post-fs-data
     chown system net_bt_admin /dev/uinput
 
     #TV-out
-    chmod 0664 /dev/TV-out
+    #chmod 0664 /dev/TV-out
 
     #External Display Service
     chmod 0664 /dev/ext_display
 
     #HDMI
-    chmod 0664 /dev/hdmitx
+    #chmod 0664 /dev/hdmitx
 
     # JPEG
     chmod 0444 /dev/mtk_jpeg
