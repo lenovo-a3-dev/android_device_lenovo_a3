@@ -1,4 +1,4 @@
-import init.mt6589.usb.rc
+import init.mt8389.usb.rc
 import init.modem.rc
 import init.protect.rc
 
@@ -35,7 +35,7 @@ on init
     chmod 0660 /proc/lk_env
 
 on fs
-    mount_all /fstab.mt6589
+    mount_all /fstab.mt8389
     mkdir /protect_f
     mkdir /protect_s 
 
