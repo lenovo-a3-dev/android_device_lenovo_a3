@@ -28,6 +28,9 @@ on init
     mkdir /data/media 0770 media_rw media_rw
     chown media_rw media_rw /data/media
 
+    mkdir /storage/usbdisk0 0700 root root
+    mkdir /mnt/media_rw/usbdisk0 0700 media_rw media_rw
+
     mkdir /cache 0771 system cache
 
     # Change ION driver permission
@@ -573,5 +576,9 @@ service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emul
     class late_start
 
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+
+service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk0 /storage/usbdisk0
     class late_start
     disabled
