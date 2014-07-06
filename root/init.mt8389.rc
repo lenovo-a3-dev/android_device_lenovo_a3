@@ -8,7 +8,7 @@ on early-init
 on boot
     chown root radio /proc/cmdline
 
-on init  
+on init
     mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
     mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
     mkdir /storage/sdcard0 0700 root root
@@ -21,6 +21,9 @@ on init
 
     export EXTERNAL_STORAGE /storage/sdcard0
     export SECONDARY_STORAGE /storage/sdcard1
+
+    mkdir /storage/usbdisk0 0700 root root
+    mkdir /mnt/media_rw/usbdisk0 0700 media_rw media_rw
 
     mkdir /cache 0771 system cache
 
@@ -37,7 +40,7 @@ on init
 on fs
     mount_all /fstab.mt8389
     mkdir /protect_f
-    mkdir /protect_s 
+    mkdir /protect_s
 
     chown system system /protect_f
     chown system system /protect_s
@@ -64,11 +67,11 @@ on post-fs-data
     mkdir /data/dalvik-cache 0771 system system
     chown system system /data/dalvik-cache
     chmod 0771 /data/dalvik-cache
-                
+
     mkdir /cache/dalvik-cache 0771 system system
     chown system system /cache/dalvik-cache
     chmod 0771 /cache/dalvik-cache
- 
+
     mkdir /data/nvram 0770 root nvram
 
     # radvd
@@ -235,7 +238,7 @@ on post-fs-data
     exec /system/xbin/mknod /dev/fm     c 193 0
     chmod 0660 /dev/stpwmt
     chown system system /dev/stpwmt
- 
+
     exec /system/xbin/mknod /dev/wmtWifi c 153 0
     chmod 0666 /dev/wmtWifi
 
@@ -570,5 +573,9 @@ service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard0 /s
 
 # virtual sdcard daemon running as media_rw (1023)
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
+    class late_start
+    disabled
+
+service fuse_usbdisk0 /system/bin/sdcard -u 1023 -g 1023 -d /mnt/media_rw/usbdisk0 /storage/usbdisk0
     class late_start
     disabled
