@@ -89,3 +89,6 @@ WIFI_DRIVER_FW_PATH_P2P := "STA+P2P"
 
 # telephony
 BOARD_RIL_CLASS := ../../../device/lenovo/A3000/ril/
+
+# nvram permission fix
+TARGET_SPECIFIC_HEADER_PATH := device/lenovo/A3000/include
