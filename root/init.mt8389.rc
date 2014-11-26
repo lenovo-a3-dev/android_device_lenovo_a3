@@ -124,10 +124,6 @@ on post-fs-data
     chmod 0660 /sys/devices/platform/msensor/driver/cpsreptxy
     chmod 0660 /sys/devices/platform/msensor/driver/cpsreptz
 
-    # GesturePorting Jiangde++, for gsensor no early suspend
-    # chmod 0777  /sys/devices/platform/gsensor/driver/noearly
-    chown system /sys/devices/platform/gsensor/driver/noearly
-
     chown system system /dev/hwmsensor
     chown system system /dev/msensor
     chown system system /dev/gsensor
@@ -230,7 +226,6 @@ on post-fs-data
     insmod /system/lib/modules/mtk_stp_gps.ko
     insmod /system/lib/modules/mtk_stp_bt.ko
     insmod /system/lib/modules/mtk_fm_drv.ko
-    #insmod /system/lib/modules/mtk_fm_priv.ko
     insmod /system/lib/modules/mtk_wmt_wifi.ko
 
     # Create char device file for WMT, GPS, BT, FM, WIFI
