@@ -14,7 +14,7 @@
 ** distributed under the License is distributed on an "AS IS" BASIS,
 ** WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 ** See the License for the specific language governing permissions and
-** limitations under the License.
+** limitations under te License.
 */
 -->
 
@@ -23,7 +23,6 @@
     <!-- Defines the shutdown options shown in the reboot dialog. -->
     <array name="shutdown_reboot_options" translatable="false">
         <item>@string/reboot_reboot</item>
-        <item>@string/reboot_soft</item>
         <item>@string/reboot_recovery</item>
     </array>
 
@@ -31,7 +30,6 @@
          The first item should be empty for regular reboot. -->
     <string-array name="shutdown_reboot_actions" translatable="false">
         <item></item>
-        <item>soft_reboot</item>
         <item>recovery</item>
     </string-array>
 </resources>
