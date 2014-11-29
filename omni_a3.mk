@@ -14,17 +14,21 @@
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/a3/full_a3.mk)
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Inherit Omni GSM telephony parts
+$(call inherit-product, vendor/omni/config/gsm.mk)
+
+# Inherit from our custom product configuration
+$(call inherit-product, vendor/omni/config/common_tablet.mk)
+
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
 TARGET_SCREEN_WIDTH := 600
 
-
-# Overrides for CM
-PRODUCT_NAME := cm_a3
+# Overrides for Omni
+PRODUCT_NAME := omni_a3
 PRODUCT_DEVICE := a3
-PRODUCT_RELEASE_NAME := LenovoA3000-H
 
 #Set build fingerprint / ID / Prduct Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
