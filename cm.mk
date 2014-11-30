@@ -21,14 +21,14 @@ TARGET_SCREEN_HEIGHT := 1024
 TARGET_SCREEN_WIDTH := 600
 
 
-# Overrides for CM
+# Override some product defines for CM
 PRODUCT_NAME := cm_a3
 PRODUCT_DEVICE := a3
 PRODUCT_RELEASE_NAME := LenovoA3000-H
 
-#Set build fingerprint / ID / Prduct Name ect.
+# Set build fingerprint / ID / Prduct Name ect.
 PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=LenovoA3000-H \
     TARGET_DEVICE=A3000 \
-    BUILD_FINGERPRINT="Lenovo/LenovoA3000-H/A3000:4.2.2/JDQ39/A3000_A422_011_022_140127_WW_C:user/release-keys" \
-    PRIVATE_BUILD_DESC="a3000_row_call-user 4.2.2 JDQ39 147 release-keys"
+    BUILD_FINGERPRINT="Lenovo/LenovoA3000-H/A3000:4.2.1/JOP40D/A3000_A421_000_029_130327_CN_3:user/release-keys" \
+    PRIVATE_BUILD_DESC="a3000_prc_3gfull-user 4.2.1 JOP40D 18 release-keys"
