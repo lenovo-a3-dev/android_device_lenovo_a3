@@ -12,14 +12,14 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-$(call inherit-product-if-exists, vendor/lenovo/a3/a3-vendor.mk)
+$(call inherit-product, vendor/lenovo/a3/a3-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/
 
 # This tab uses high-density artwork where available
 PRODUCT_LOCALES += hdpi
 
-# Screen size is "large" 7'tablet, density is "hdpi"
+# Screen size is "large" 7" tablet, density is "hdpi"
 PRODUCT_AAPT_CONFIG := large hdpi
 
 # This is a tablet
@@ -50,15 +50,12 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/root/fstab.mt8389:root/fstab.mt8389 \
-	$(LOCAL_PATH)/recovery/twrp.fstab:recovery/root/etc/twrp.fstab \
-	$(LOCAL_PATH)/recovery/extra.fstab:recovery/root/etc/extra.fstab
-
-PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/root/ueventd.mt8389.rc:root/ueventd.mt8389.rc \
 	$(LOCAL_PATH)/root/init.mt8389.rc:root/init.mt8389.rc \
 	$(LOCAL_PATH)/root/init.modem.rc:root/init.modem.rc \
 	$(LOCAL_PATH)/root/init.protect.rc:root/init.protect.rc \
-	$(LOCAL_PATH)/root/init.mt8389.usb.rc:/root/init.mt8389.usb.rc
+	$(LOCAL_PATH)/root/init.mt8389.usb.rc:/root/init.mt8389.usb.rc \
+	$(LOCAL_PATH)/root/ueventd.mt8389.rc:root/ueventd.mt8389.rc \
+	$(LOCAL_PATH)/root/twrp.fstab:recovery/root/etc/twrp.fstab
 
 # frameworks/native/data/etc/android.hardware.wifi.direct.xml:system/etc/permissions/android.hardware.wifi.direct.xml
 
@@ -74,8 +71,8 @@ PRODUCT_COPY_FILES += \
 	frameworks/native/data/etc/android.hardware.camera.front.xml:system/etc/permissions/android.hardware.camera.front.xml
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/media_codecs.xml:system/etc/media_codecs.xml \
-	$(LOCAL_PATH)/media_profiles.xml:system/etc/media_profile.xml
+	$(LOCAL_PATH)/config/media_codecs.xml:system/etc/media_codecs.xml \
+	$(LOCAL_PATH)/config/media_profiles.xml:system/etc/media_profile.xml
 
 PRODUCT_PROPERTY_OVERRIDES := \
 	fmradio.driver.chip=3 \
@@ -128,6 +125,6 @@ PRODUCT_PACKAGES += \
 	lib_driver_cmd_mtk
 
 PRODUCT_COPY_FILES += \
-	$(LOCAL_PATH)/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
+	$(LOCAL_PATH)/config/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
