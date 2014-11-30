@@ -1,2 +1,0 @@
-/devices/platform/mtk-msdc.0/mmc_host/mmc0 emmc@fat vfat defaults voldmanaged=sdcard0:9,nonremovable,noemulatedsd
-/devices/platform/mtk-msdc.1/mmc_host/mmc1 auto auto defaults voldmanaged=sdcard1:auto
