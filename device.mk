@@ -126,6 +126,11 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
 	lib_driver_cmd_mtk
 
+# Charger
+PRODUCT_PACKAGES += \
+    charger \
+    charger_res_images
+
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
