@@ -125,7 +125,10 @@ lib/libnvram_daemon_callback.so
 lib/libfile_op.so
 lib/libhwm.so 
 lib/librilmtk.so
+lib/librilmtkmd2.so
+lib/libutilrilmtk.so
 lib/mtk-ril.so
+lib/mtk-rilmd2.so
 
 bin/msensord
 bin/ami304d
