@@ -88,4 +88,4 @@ WIFI_DRIVER_FW_PATH_STA := "STA"
 WIFI_DRIVER_FW_PATH_P2P := "STA+P2P"
 
 # telephony
-BOARD_RIL_CLASS := ../../../device/lenovo/a3/ril/
+#BOARD_RIL_CLASS := ../../../device/lenovo/a3/ril/
