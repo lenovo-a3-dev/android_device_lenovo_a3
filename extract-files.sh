@@ -1,7 +1,7 @@
 #!/bin/sh
 
 VENDOR=lenovo
-DEVICE=a3
+DEVICE=A3000
 
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
