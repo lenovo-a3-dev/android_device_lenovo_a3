@@ -13,7 +13,7 @@
 # limitations under the License.
 
 # Inherit device configuration
-$(call inherit-product, device/lenovo/a3/full_a3.mk)
+$(call inherit-product, device/lenovo/A3000/full_A3000.mk)
 $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 
 # Boot animation
@@ -22,8 +22,8 @@ TARGET_SCREEN_WIDTH := 600
 
 
 # Overrides for CM
-PRODUCT_NAME := cm_a3
-PRODUCT_DEVICE := a3
+PRODUCT_NAME := cm_A3000
+PRODUCT_DEVICE := A3000
 PRODUCT_RELEASE_NAME := LenovoA3000-H
 
 #Set build fingerprint / ID / Prduct Name ect.
@@ -31,4 +31,4 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRODUCT_NAME=LenovoA3000-H \
     TARGET_DEVICE=A3000 \
     BUILD_FINGERPRINT="Lenovo/LenovoA3000-H/A3000:4.2.2/JDQ39/A3000_A422_011_022_140127_WW_C:user/release-keys" \
-    PRIVATE_BUILD_DESC="a3000_row_call-user 4.2.2 JDQ39 147 release-keys"
+    PRIVATE_BUILD_DESC="A3000000_row_call-user 4.2.2 JDQ39 147 release-keys"

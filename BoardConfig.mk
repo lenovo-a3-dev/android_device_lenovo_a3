@@ -12,9 +12,9 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-DEVICE_FOLDER := device/lenovo/a3
+DEVICE_FOLDER := device/lenovo/A3000
 
--include vendor/lenovo/a3/BoardConfigVendor.mk
+-include vendor/lenovo/A3000/BoardConfigVendor.mk
 
 # board
 TARGET_BOARD_PLATFORM := mt6589
@@ -25,7 +25,7 @@ TARGET_CPU_SMP := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 
-TARGET_OTA_ASSERT_DEVICE := a3,a3000_row_call,A3000,a3000
+TARGET_OTA_ASSERT_DEVICE := A3000,A3000000_row_call,A3000,A3000000
 
 # blob hacks
 COMMON_GLOBAL_CFLAGS += -DMR1_AUDIO_BLOB -DDISABLE_HW_ID_MATCH_CHECK -DNEEDS_VECTORIMPL_SYMBOLS
@@ -36,7 +36,7 @@ BOARD_HAVE_PRE_KITKAT_AUDIO_POLICY_BLOB := true
 BOARD_HAVE_BLUETOOTH := true
 BOARD_HAVE_BLUETOOTH_MTK := true
 BOARD_BLUETOOTH_DOES_NOT_USE_RFKILL := true
-BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/a3/bluetooth
+BOARD_BLUETOOTH_BDROID_BUILDCFG_INCLUDE_DIR := device/lenovo/A3000/bluetooth
 
 # power
 TARGET_POWERHAL_VARIANT := cm
@@ -46,7 +46,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CUSTOM_BOOTIMG_MK := $(DEVICE_FOLDER)/boot.mk
 
 # EGL settings
-BOARD_EGL_CFG := device/lenovo/a3/egl.cfg
+BOARD_EGL_CFG := device/lenovo/A3000/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
@@ -88,4 +88,4 @@ WIFI_DRIVER_FW_PATH_STA := "STA"
 WIFI_DRIVER_FW_PATH_P2P := "STA+P2P"
 
 # telephony
-BOARD_RIL_CLASS := ../../../device/lenovo/a3/ril/
+BOARD_RIL_CLASS := ../../../device/lenovo/A3000/ril/
