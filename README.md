@@ -1,7 +1,7 @@
 Lenovo IdeaTab A3000-H
 ======================
 
-The Lenovo IdeaTab A3000-H (codenamed _"a3"_) is a tablet from Lenovo Mobile.
+The Lenovo IdeaTab A3000-H (codenamed _"A3000"_) is a tablet from Lenovo Mobile.
 
 This branch is for building CyanogenMod 11 (or Android KitKat 4.4 AOSP based roms) ROMS. Huge thanks to chrmhoffmann and Dr-Shadow for their work on MTK!
 
