@@ -20,6 +20,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Device identifier
 PRODUCT_NAME := full_a3
 PRODUCT_DEVICE := a3
-PRODUCT_MODEL := Lenovo IdeaTab A3000-H
+PRODUCT_MODEL := IdeaTab A3000-H
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := LENOVO
