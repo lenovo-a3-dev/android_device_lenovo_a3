@@ -16,9 +16,11 @@ $(call inherit-product-if-exists, vendor/lenovo/a3/a3-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay/
 
-# Enable higher-res drawables while keeping mdpi as primary source
-PRODUCT_AAPT_CONFIG := normal large tvdpi hdpi
-PRODUCT_AAPT_PREF_CONFIG := tvdpi
+# This tab uses high-density artwork where available
+PRODUCT_LOCALES += hdpi
+
+# Screen size is "large" 7'tablet, density is "hdpi"
+PRODUCT_AAPT_CONFIG := large hdpi
 
 # This is a tablet
 PRODUCT_CHARACTERISTICS := tablet
@@ -128,4 +130,4 @@ PRODUCT_PACKAGES += \
 PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
-$(call inherit-product, frameworks/native/build/tablet-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
