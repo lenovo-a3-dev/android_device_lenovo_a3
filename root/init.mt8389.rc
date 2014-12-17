@@ -9,18 +9,24 @@ on boot
     chown root radio /proc/cmdline
 
 on init  
-    mkdir /mnt/media_rw/sdcard0 0700 media_rw media_rw
+    mkdir /mnt/shell/emulated 0700 shell shell
+    mkdir /storage/emulated 0555 root root
+
     mkdir /mnt/media_rw/sdcard1 0700 media_rw media_rw
-    mkdir /storage/sdcard0 0700 root root
     mkdir /storage/sdcard1 0700 root root
 
-    symlink /storage/sdcard0 /mnt/emmc
-    symlink /storage/sdcard0 /emmc
-    symlink /storage/sdcard1 /sdcard
-    symlink /storage/sdcard1 /mnt/sdcard
+    symlink /storage/emulated/legacy /sdcard
+    symlink /storage/emulated/legacy /mnt/sdcard
+    symlink /storage/emulated/legacy /storage/sdcard0
+    symlink /mnt/shell/emulated/0 /storage/emulated/legacy
 
-    export EXTERNAL_STORAGE /storage/sdcard0
+    export EXTERNAL_STORAGE /storage/emulated/legacy
     export SECONDARY_STORAGE /storage/sdcard1
+    export EMULATED_STORAGE_SOURCE /mnt/shell/emulated
+    export EMULATED_STORAGE_TARGET /storage/emulated
+
+    mkdir /data/media 0770 media_rw media_rw
+    chown media_rw media_rw /data/media
 
     mkdir /cache 0771 system cache
 
@@ -562,13 +568,10 @@ service mnld /system/xbin/mnld
     socket mnld stream 660 gps system
     disabled
 
-
 # virtual sdcard daemon running as media_rw (1023)
-service fuse_sdcard0 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard0 /storage/sdcard0
+service sdcard /system/bin/sdcard -u 1023 -g 1023 -l /data/media /mnt/shell/emulated
     class late_start
-    disabled
 
-# virtual sdcard daemon running as media_rw (1023)
 service fuse_sdcard1 /system/bin/sdcard -u 1023 -g 1023 /mnt/media_rw/sdcard1 /storage/sdcard1
     class late_start
     disabled
