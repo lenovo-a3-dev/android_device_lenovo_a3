@@ -16,3 +16,13 @@
 /dev/bootimg      /boot               emmc      defaults          			defaults
 /dev/recovery     /recovery           emmc      defaults                                defaults
 /dev/uboot        /uboot              emmc      defaults                                defaults
+
+### Reference
+# emmc@android -> /dev/block/mmcblk0p5
+# emmc@cache -> /dev/block/mmcblk0p6
+# emmc@ebr1 -> /dev/block/mmcblk0p1
+# emmc@fat -> /dev/block/mmcblk0p8
+# emmc@protect_f -> /dev/block/mmcblk0p2
+# emmc@protect_s -> /dev/block/mmcblk0p3
+# emmc@sec_ro -> /dev/block/mmcblk0p4
+# emmc@usrdata -> /dev/block/mmcblk0p7
