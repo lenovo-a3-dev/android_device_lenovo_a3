@@ -67,7 +67,8 @@ BOARD_FLASH_BLOCK_SIZE := 512
 TARGET_USERIMAGES_USE_EXT4 := true
 
 # recovery
-RECOVERY_NAME := ClockworkMod Recovery for the Lenovo A3000-H
+TARGET_NO_SEPARATE_RECOVERY := true
+RECOVERY_NAME := ClockworkMod Recovery for the Lenovo IdeaTab A3000-H
 TARGET_COMMON_NAME := Lenovo IdeaTab A3000-H
 #BOARD_RECOVERY_SWIPE := true
 TARGET_RECOVERY_FSTAB := $(DEVICE_FOLDER)/root/fstab.mt8389
