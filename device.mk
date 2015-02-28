@@ -132,3 +132,7 @@ PRODUCT_COPY_FILES += \
 	$(LOCAL_PATH)/config/wpa_supplicant_overlay.conf:system/etc/wifi/wpa_supplicant_overlay.conf
 
 $(call inherit-product, frameworks/native/build/tablet-7in-hdpi-1024-dalvik-heap.mk)
+
+# OpenDelta
+PRODUCT_PROPERTY_OVERRIDES += ro.delta.version=VERSION
+PRODUCT_PACKAGES += OpenDelta
