@@ -8,9 +8,9 @@
 /emmc@usrdata     /data               ext4      noatime,nosuid,nodev,noauto_da_alloc    wait,encryptable=footer
 
 # Hack for CWM
-/dev/block/mmcblk0p8 /emmc            vfat      defaults                                recoveryonly
+/dev/block/mmcblk0p9 /emmc            vfat      defaults                                recoveryonly
 
-/devices/platform/mtk-msdc.0/mmc_host/mmc0 auto     auto        defaults     voldmanaged=sdcard0:8,nonremovable,noemulatedsd
+/devices/platform/mtk-msdc.0/mmc_host/mmc0 auto     auto        defaults     voldmanaged=sdcard0:9,nonremovable,noemulatedsd
 /devices/platform/mtk-msdc.1/mmc_host/mmc1 auto     auto        nosuid,nodev voldmanaged=sdcard1:auto
 
 /devices/platform/mt_usb auto auto defaults voldmanaged=usbdisk0:auto
@@ -20,11 +20,12 @@
 /dev/uboot        /uboot              emmc      defaults                                defaults
 
 ### Reference
-# emmc@android -> /dev/block/mmcblk0p5
-# emmc@cache -> /dev/block/mmcblk0p6
 # emmc@ebr1 -> /dev/block/mmcblk0p1
-# emmc@fat -> /dev/block/mmcblk0p8
 # emmc@protect_f -> /dev/block/mmcblk0p2
 # emmc@protect_s -> /dev/block/mmcblk0p3
 # emmc@sec_ro -> /dev/block/mmcblk0p4
-# emmc@usrdata -> /dev/block/mmcblk0p7
+# emmc@fac -> /dev/block/mmcblk0p5
+# emmc@android -> /dev/block/mmcblk0p6
+# emmc@cache -> /dev/block/mmcblk0p7
+# emmc@usrdata -> /dev/block/mmcblk0p8
+# emmc@fat -> /dev/block/mmcblk0p9
