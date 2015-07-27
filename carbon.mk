@@ -14,7 +14,10 @@
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/a3/full_a3.mk)
-$(call inherit-product, vendor/cm/config/common_full_phone.mk)
+
+# Inherit common Carbon stuff
+$(call inherit-product, vendor/carbon/config/common_phone.mk)
+$(call inherit-product, vendor/carbon/config/common.mk)
 
 # Boot animation
 TARGET_SCREEN_HEIGHT := 1024
@@ -22,7 +25,7 @@ TARGET_SCREEN_WIDTH := 600
 
 
 # Override some product defines for CM
-PRODUCT_NAME := cm_a3
+PRODUCT_NAME := carbon_a3
 PRODUCT_DEVICE := a3
 PRODUCT_RELEASE_NAME := LenovoA3000-H
 
