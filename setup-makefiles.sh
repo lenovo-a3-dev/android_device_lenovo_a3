@@ -64,8 +64,8 @@ PRODUCT_COPY_FILES += \\
 EOF
 
 LINEEND=" \\"
-COUNT=`cat proprietary-files.txt | grep -v ^# | grep -v ^$ | wc -l | awk {'print $1'}`
-for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
+COUNT=`grep -v ^# ../$DEVICE/proprietary-files.txt | grep -v ^$ | wc -l | awk {'print $1'}`
+for FILE in `grep -v ^# ../$DEVICE/proprietary-files.txt | grep -v ^$ | sort`; do
 COUNT=`expr $COUNT - 1`
     if [ $COUNT = "0" ]; then
 LINEEND=""
