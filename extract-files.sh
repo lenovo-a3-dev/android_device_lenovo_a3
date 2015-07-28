@@ -6,7 +6,7 @@ DEVICE=a3
 BASE=../../../vendor/$VENDOR/$DEVICE/proprietary
 
 echo "Pulling $DEVICE blobs..."
-for FILE in `cat proprietary-files.txt | grep -v ^# | grep -v ^$`; do
+for FILE in `grep -v ^# ../$DEVICE/proprietary-files.txt | grep -v ^$ | sort`; do
 DIR=`dirname $FILE`
     if [ ! -d $BASE/$DIR ]; then
 mkdir -p $BASE/$DIR
