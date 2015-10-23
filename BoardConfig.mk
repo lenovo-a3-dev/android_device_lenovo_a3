@@ -12,12 +12,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-LOCAL_PATH := device/lenovo/a3
+LOCAL_PATH := device/lenovo/s6
 
--include vendor/lenovo/a3/BoardConfigVendor.mk
+-include vendor/lenovo/s6/BoardConfigVendor.mk
 
 # board
-TARGET_BOOTLOADER_BOARD_NAME := a3000_prc_3gfull
+TARGET_BOOTLOADER_BOARD_NAME := s6000_prc_3gfull
 TARGET_BOARD_PLATFORM := mt6589
 TARGET_ARCH := arm
 TARGET_CPU_ABI := armeabi-v7a
@@ -26,7 +26,7 @@ TARGET_CPU_SMP := true
 TARGET_ARCH_VARIANT := armv7-a-neon
 TARGET_CPU_VARIANT := cortex-a7
 
-TARGET_OTA_ASSERT_DEVICE := a3,a3000_prc_3gfull,A3000,a3000
+TARGET_OTA_ASSERT_DEVICE := s6,s6000_prc_3gfull,A3000,s6000
 
 # blob hacks
 COMMON_GLOBAL_CFLAGS += -DMR1_AUDIO_BLOB -DDISABLE_HW_ID_MATCH_CHECK -DNEEDS_VECTORIMPL_SYMBOLS -DMTK_G_MT6589
@@ -50,7 +50,7 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/boot.mk
 
 # EGL settings
-BOARD_EGL_CFG := device/lenovo/a3/config/egl.cfg
+BOARD_EGL_CFG := device/lenovo/s6/config/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 

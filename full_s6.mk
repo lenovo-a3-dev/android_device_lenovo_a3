@@ -13,13 +13,13 @@
 # limitations under the License.
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/lenovo/a3/device.mk)
+$(call inherit-product, device/lenovo/s6/device.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
 
 # Device identifier
-PRODUCT_NAME := full_a3
-PRODUCT_DEVICE := a3
+PRODUCT_NAME := full_s6
+PRODUCT_DEVICE := s6
 PRODUCT_MODEL := IdeaTab A3000-H
 PRODUCT_BRAND := Lenovo
 PRODUCT_MANUFACTURER := LENOVO

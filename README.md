@@ -1,7 +1,7 @@
 Lenovo IdeaTab S6000H ('s6')
 ============================
 
-This project supports building AOSP-based custom ROMs and recoveries for the Lenovo S6000 tablet device. It was originally a fork from the Lenovo A3000H device tree, created by [lenovo-a3-dev](https://github.com/lenovo-a3-dev).
+This project supports building AOSP-based custom ROMs and recoveries for the Lenovo S6000 tablet device. It was originally a fork from the Lenovo A3000H device tree, created by [lenovo-s6-dev](https://github.com/lenovo-s6-dev).
 
 Basic   | Technical Specifications
 -------:|:-------------------------
