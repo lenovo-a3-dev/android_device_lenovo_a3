@@ -1,7 +1,7 @@
 Lenovo IdeaTab S6000H ('s6')
 ============================
 
-This branch is for building CyanogenMod 12.1 (or Android Lollipop 5.1 AOSP based roms) ROMS. This project has been forked from the Lenovo A3000H device tree originally created by [lenovo-a3-dev](https://github.com/lenovo-a3-dev). Huge thanks to him. As with the original, this project contains resources from chrmhoffmann and Dr-Shadow and their work on Mediatek-based mobile devices.
+This project supports building AOSP-based custom ROMs and recoveries for the Lenovo S6000 tablet device. It was originally a fork from the Lenovo A3000H device tree, created by [lenovo-a3-dev](https://github.com/lenovo-a3-dev).
 
 Basic   | Technical Specifications
 -------:|:-------------------------
@@ -16,6 +16,13 @@ Display | 7" 1024x600 px
 Rear camera  | 5 MPx
 
 # Retrieving the source code
-Please follow CyanogenMod's official tutorial on obtaining the Android source tree before you continue.
+Please follow CyanogenMod or the AOSP's official tutorial on obtaining the Android source tree before you continue
 
-Using either `git clone` or by adding this repository to your source tree's repo manifest, place this project, relative to the root of the source, in `device/lenovo/s6000`.
+Using either `git clone` or by adding this repository to your source tree's repo manifest, place this project, relative to the root of the source, in `device/lenovo/s6000`, like so:
+
+```
+cd <aosp>
+git clone https://github.com/georgewhite5/device_lenovo_s6000 device/lenovo/s6000
+```
+
+Where `<aosp>` is the path to the source tree for your AOSP-based ROM project.
