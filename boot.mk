@@ -16,7 +16,7 @@
 
 # can this be done in bash? credits go to bgcngm
 define make_header
-  perl -e 'print pack("a4 L a32 a472", "\x88\x16\x88\x58", $$ARGV[0], $$ARGV[1], "\xFF"x472)' $(1) $(2) > $(3)
+  perl -e 'print pack("a4 L s62 a472", "\x88\x16\x88\x58", $$ARGV[0], $$ARGV[1], "\xFF"x472)' $(1) $(2) > $(3)
 endef
 
 # this is overriding targets from build/core/Makefile
