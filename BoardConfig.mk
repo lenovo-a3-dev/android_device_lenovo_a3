@@ -50,7 +50,6 @@ TARGET_NO_BOOTLOADER := true
 BOARD_CUSTOM_BOOTIMG_MK := $(LOCAL_PATH)/boot.mk
 
 # EGL settings
-BOARD_EGL_CFG := device/lenovo/a3/config/egl.cfg
 USE_OPENGL_RENDERER := true
 BOARD_EGL_WORKAROUND_BUG_10194508 := true
 
